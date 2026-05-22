@@ -1,0 +1,94 @@
+body{
+    font-family: 'Exo 2', sans-serif;
+}
+#nav1{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #191929;
+    color: white;
+    height: 90px;
+    justify-content: space-between;
+}
+#nav2{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background-color: #2149b6;
+    color: white;
+    height: 60px;
+    justify-content: space-between;
+}
+#nav1 a{
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+}
+#nav1 a:hover{
+    text-decoration: underline;
+}
+#nav2 a{
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+}
+#nav2 a:hover{
+    text-decoration: underline;
+}
+#navs{
+    position: relative;
+}
+#navs img{
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 500px;
+}
+#linkD{
+    display: flex;
+    gap: 20px
+}
+#linkE{
+    display: flex;
+    gap: 40px;
+}
+#linkD1{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+#linkE1{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+#banner{
+    background-image: url('/imagens/img-background.png');
+    background-size: cover;
+    height: 1050px;
+    background-position: top center;
+}
+#pesquisa{
+    border-radius: 15px;
+    height: 35px;
+    font-family: 'Exo 2', sans-serif;
+    caret-color: white;
+}
+#pesquisa:focus{
+    outline: none;
+}
+#categorias{
+    border: none;
+    background-color: transparent;
+    color: white;
+    height: 35px;
+    font-family: 'Exo 2', sans-serif; 
+}
+#categorias:focus{
+    outline: none;
+}
+#categorias option{
+    background-color: #191929;
+    color: white;
+}
