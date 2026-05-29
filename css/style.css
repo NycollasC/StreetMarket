@@ -5,7 +5,7 @@ body{
     display: flex;
     align-items: center;
     gap: 20px;
-    background-color: #191929;
+    background-color: #000b1b;
     color: white;
     height: 90px;
     justify-content: space-between;
@@ -14,7 +14,7 @@ body{
     display: flex;
     align-items: center;
     gap: 40px;
-    background-color: #2149b6;
+    background-color: #00226f;
     color: white;
     height: 60px;
     justify-content: space-between;
@@ -42,38 +42,56 @@ body{
     position: absolute;
     left: 50%;
     top: 90%;
-    transform: translateX(-50%) translateY(-50%);
-    width: 500px;
+    transform: translateX(-50%) translateY(-40%);
+    width: 750px;
 }
-#linkD{
+#linkD2{
     display: flex;
     gap: 20px
 }
-#linkE{
+#linkE2{
     display: flex;
-    gap: 40px;
+    gap: 20px;
 }
 #linkD1{
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 0px;
 }
 #linkE1{
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 15px;
+}
+#linkE1 a {
+    display: flex;
+    text-align: center;
+    gap: 8px;
+}
+#linkD1 a{
+    display: flex;
+    text-align: center;
+    gap: 8px;
+}
+#linkD2 a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 #banner{
-    background-image: url('/imagens/img-background.png');
+    background-image: url('../imagens/img-background2.png');
     background-size: cover;
-    height: 1050px;
-    background-position: top center;
+    height: 950px;
+    background-position: center -125px;
 }
 #pesquisa{
-    border-radius: 15px;
-    height: 35px;
+    border-radius: 10px 0 0 10px;
+    height: 45px;
     font-family: 'Exo 2', sans-serif;
     caret-color: white;
+    width: 285px;
+    padding: 15px;
+    border: none;
 }
 #pesquisa:focus{
     outline: none;
@@ -84,6 +102,7 @@ body{
     color: white;
     height: 35px;
     font-family: 'Exo 2', sans-serif; 
+    font-size: 17px;
 }
 #categorias:focus{
     outline: none;
@@ -91,4 +110,39 @@ body{
 #categorias option{
     background-color: #191929;
     color: white;
+}
+.icon1{
+    color: #fbd107;
+    font-size: 25px;
+}
+.icon2{
+    color: #fbd107;
+    font-size: 20px;
+}
+.bi.bi-person, .bi.bi-cart2{
+    font-size: 30px;
+    color: white;
+}
+.bi.bi-ticket, .bi.bi-fire, .bi.bi-question-circle{
+    color: white;
+}
+.bi.bi-star-fill {
+    font-size: 15px;
+    border: 2.5px solid #fbd107;
+    border-radius: 50%;
+    padding: 3px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 15px;
+    height: 15px;
+}
+
+#btn-pesquisa{
+    background-color: #fbd107;
+    border-radius: 0 15px 15px 0;
+    font-size: 15px;
+    padding: 14px;
+    border: none;
+    cursor: pointer;
 }
