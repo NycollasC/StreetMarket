@@ -44,6 +44,7 @@ body{
     top: 90%;
     transform: translateX(-50%) translateY(-40%);
     width: 750px;
+    z-index: 99;
 }
 #linkD2{
     display: flex;
@@ -77,12 +78,6 @@ body{
     display: flex;
     align-items: center;
     gap: 8px;
-}
-#banner{
-    background-image: url('../imagens/img-background2.png');
-    background-size: cover;
-    height: 950px;
-    background-position: center -125px;
 }
 #pesquisa{
     border-radius: 10px 0 0 10px;
@@ -145,4 +140,73 @@ body{
     padding: 14px;
     border: none;
     cursor: pointer;
+}
+#banner {
+    background-image: url('../imagens/img-background2.png');
+    background-size: cover;
+    height: 950px;
+    background-position: center -125px;
+    position: relative; /* ADICIONADO: Agora o banner serve como âncora para os dois botões */
+}
+
+.btn-confira {
+  display: inline-block;
+  background-color: #ffe600; /* Amarelo Neon */
+  color: #000;
+  
+  font-size: 14px;
+  font-weight: 900;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: transform 0.2s ease-in-out, background-color 0.2s;
+  border-radius: 5px;
+  /* POSICIONAMENTO EXATO NO BANNER DA COPA */
+  position: absolute;
+  top: 405px;         /* Move o botão para baixo, logo abaixo do texto 'FIFA 2026' */
+  left: 35px;         /* Alinha à esquerda dentro do banner da copa */
+  z-index: 10;
+}
+
+.btn-confira:hover {
+  background-color: #fff;
+  transform: skewX(-15deg) scale(1.05); /* Mantém inclinado e cresce no hover */
+}
+
+/* Desentorta o texto de dentro do botão */
+.btn-confira span, .btn-confira {
+  font-style: normal;
+}
+
+.btn-prevenda {
+   background-color: #05010a; /* Preto levemente azulado/roxo de fundo */
+  color: #ffffff;
+
+  /* BORDA GRADIENTE NEON (Rosa/Roxo) */
+  border: 1px solid transparent;
+  background-image: linear-gradient(#05010a, #05010a), linear-gradient(135deg, #ff007f, #7b2cbf);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  padding: 7px 30px 5px 30px;
+  border-radius: 10px; /* Cantos levemente arredondados */
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; /* Espaço entre o texto e o carrinho */
+  transition: background-color 0.2s ease, color 0.2s ease;
+   box-shadow: 0 0 10px rgba(255, 0, 127, 0.2);
+  
+  /* POSICIONAMENTO EXATO NO BANNER CENTRAL DO GTA */
+  position: absolute;
+  top: 515px;         /* Empurra para baixo, exatamente abaixo do carro do GTA VI */
+  left: 50%;          /* Move para a metade da largura da tela */
+  transform: translateX(-30%); /* Centraliza perfeitamente no meio da imagem */
+  z-index: 10;
+}
+
+.btn-prevenda:hover {
+   box-shadow: 0 0 18px rgba(255, 0, 127, 0.6), 0 0 5px rgba(123, 44, 191, 0.6);
+  transform: translateX(-30%) scale(1.03); /* Cresce suavemente sem perder o alinhamento */
 }
