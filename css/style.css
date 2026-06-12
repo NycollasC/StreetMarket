@@ -132,7 +132,6 @@ body{
     width: 15px;
     height: 15px;
 }
-
 #btn-pesquisa{
     background-color: #fbd107;
     border-radius: 0 15px 15px 0;
@@ -146,67 +145,210 @@ body{
     background-size: cover;
     height: 950px;
     background-position: center -125px;
-    position: relative; /* ADICIONADO: Agora o banner serve como âncora para os dois botões */
+    position: relative;
 }
-
 .btn-confira {
-  display: inline-block;
-  background-color: #ffe600; /* Amarelo Neon */
-  color: #000;
-  
-  font-size: 14px;
-  font-weight: 900;
-  padding: 10px 20px;
-  text-decoration: none;
-  transition: transform 0.2s ease-in-out, background-color 0.2s;
-  border-radius: 5px;
-  /* POSICIONAMENTO EXATO NO BANNER DA COPA */
-  position: absolute;
-  top: 405px;         /* Move o botão para baixo, logo abaixo do texto 'FIFA 2026' */
-  left: 35px;         /* Alinha à esquerda dentro do banner da copa */
-  z-index: 10;
+    display: inline-block;
+    background-color: #ffe600;
+    color: #000;
+    font-size: 14px;
+    font-weight: 900;
+    padding: 10px 20px;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out, background-color 0.2s;
+    border-radius: 5px;
+    position: absolute;
+    top: 405px;
+    left: 35px;
+    z-index: 10;
 }
-
 .btn-confira:hover {
-  background-color: #fff;
-  transform: skewX(-15deg) scale(1.05); /* Mantém inclinado e cresce no hover */
+    background-color: #fff;
+    transform: skewX(-15deg) scale(1.05);
 }
-
-/* Desentorta o texto de dentro do botão */
 .btn-confira span, .btn-confira {
-  font-style: normal;
+    font-style: normal;
 }
-
+.bi-bi-cart3{
+    font-weight: bold;
+}
 .btn-prevenda {
-   background-color: #05010a; /* Preto levemente azulado/roxo de fundo */
-  color: #ffffff;
-
-  /* BORDA GRADIENTE NEON (Rosa/Roxo) */
-  border: 1px solid transparent;
-  background-image: linear-gradient(#05010a, #05010a), linear-gradient(135deg, #ff007f, #7b2cbf);
-  background-origin: border-box;
-  background-clip: padding-box, border-box;
-  font-size: 17px;
-  font-weight: bold;
-  letter-spacing: 0.5px;
-  padding: 7px 30px 5px 30px;
-  border-radius: 10px; /* Cantos levemente arredondados */
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px; /* Espaço entre o texto e o carrinho */
-  transition: background-color 0.2s ease, color 0.2s ease;
-   box-shadow: 0 0 10px rgba(255, 0, 127, 0.2);
-  
-  /* POSICIONAMENTO EXATO NO BANNER CENTRAL DO GTA */
-  position: absolute;
-  top: 515px;         /* Empurra para baixo, exatamente abaixo do carro do GTA VI */
-  left: 50%;          /* Move para a metade da largura da tela */
-  transform: translateX(-30%); /* Centraliza perfeitamente no meio da imagem */
-  z-index: 10;
+    background-color: #05010a;
+    color: #ffffff;
+    border: 1px solid transparent;
+    background-image: linear-gradient(#05010a, #05010a), linear-gradient(135deg, #ff007f, #7b2cbf);
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    padding: 7px 30px 5px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    box-shadow: 0 0 10px rgba(255, 0, 127, 0.2);
+    position: absolute;
+    top: 515px;
+    left: 50%;
+    transform: translateX(-30%);
+    z-index: 10;
+}
+.btn-prevenda:hover {
+    box-shadow: 0 0 18px rgba(255, 0, 127, 0.6), 0 0 5px rgba(123, 44, 191, 0.6);
+    transform: translateX(-30%) scale(1.03);
+}
+.produtos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px; 
+    padding: 10px;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    width: 400px;
+    z-index: 10;
+}
+.card-produto {
+    background-color: #FFFFFF;
+    border-radius: 12px; 
+    padding: 15px;
+    position: relative; 
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3); 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-produto:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0px 8px 20px rgba(251, 209, 7, 0.3);
+}
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px; 
+    margin-bottom: 10px;
+    background-color: transparent;
+}
+.img-container img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain; 
+}
+.info-produto {
+    color: #1a1a1a; 
+}
+.titulo-produto {
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    line-height: 1.3;
+}
+.preco-principal {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    color: #000;
+}
+.parcelamento {
+    font-size: 11px;
+    color: #666;
+    margin: 2px 0 0 0;
+}
+.btn-favorito {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: none;
+    border: none;
+    color: #b0b0b0;
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.2s, transform 0.2s;
+    z-index: 5;
+}
+.btn-favorito:hover {
+    color: #ff4757; 
+    transform: scale(1.15);
+}
+.tag-produto {
+    position: absolute;
+    top: 12px;
+    font-size: 9px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    border-radius: 4px;
+    color: #ffffff;
+    z-index: 2;
+}
+.tag-produto.oferta {
+    background-color: #FFD600;
+    color: #000000;
+    left: 12px;
+}
+.tag-produto.mais-vendido {
+    background-color: #1054CE;
+    left: 12px;
 }
 
-.btn-prevenda:hover {
-   box-shadow: 0 0 18px rgba(255, 0, 127, 0.6), 0 0 5px rgba(123, 44, 191, 0.6);
-  transform: translateX(-30%) scale(1.03); /* Cresce suavemente sem perder o alinhamento */
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    #navs img {
+        width: 250px;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    #nav1, #nav2 {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    #linkE1, #linkD1, #linkE2, #linkD2 {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #pesquisa {
+        width: 200px;
+    }
+
+    #banner {
+        height: auto;
+        padding-bottom: 20px;
+        background-position: center;
+    }
+
+    .produtos-grid {
+        position: static;
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 20px;
+    }
+
+    .btn-confira {
+        position: static;
+        display: block;
+        margin: 10px auto;
+        text-align: center;
+    }
+
+    .btn-prevenda {
+        position: static;
+        display: block;
+        margin: 10px auto;
+        transform: none;
+    }
+
+    .banner-copa, .banner-gta {
+        text-align: center;
+        padding: 10px;
+    }
 }
