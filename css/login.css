@@ -1,0 +1,94 @@
+body{
+    font-family: 'Exo 2', sans-serif;
+    background: url(../imagens/img-background3.jpeg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+#formCadastro{
+    position: relative;
+}
+#logo{
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    height: 125px;
+    margin: 0 auto;
+    position: absolute;
+
+}
+.block{
+    display: flex;
+    flex-direction: column;
+    background-color: white;   
+    color: white; 
+    background-color: rgba(15, 15, 25, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(186, 85, 211, 0.4); 
+    border-radius: 12px;
+    gap: 15px;
+    width: 100%;
+    max-width: 380px; 
+    padding: 70px; 
+    box-sizing: border-box;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5), 0 0 15px rgba(186, 85, 211, 0.2);
+}
+.block label {
+    font-weight: 600;
+    color: #e0e0ff;
+    margin-bottom: -5px;
+}
+.block a {
+    color: #00ffff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.2s;
+}
+
+.block a:hover {
+    color: #ff00ff;
+    text-shadow: 0 0 8px #ff00ff;
+}
+.block input[type="text"], 
+.block input[type="password"] {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    padding: 12px;
+    color: #fff;
+    font-family: inherit;
+    transition: all 0.3s;
+}
+.block input:focus {
+    outline: none;
+    border-color: #00ffff;
+    box-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+    background: rgba(255, 255, 255, 0.12);
+}
+.block input[type="submit"], 
+.block button {
+    background: linear-gradient(45deg, #ff00ff, #8a2be2); /* Gradiente Rosa/Roxo */
+    border: none;
+    border-radius: 6px;
+    padding: 14px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: transform 0.1s, box-shadow 0.3s;
+    margin-top: 10px;
+}
+
+.block input[type="submit"]:hover {
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.6);
+    transform: translateY(-2px);
+}
+
+.block input[type="submit"]:active {
+    transform: translateY(0);
+}

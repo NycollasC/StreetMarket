@@ -1,0 +1,47 @@
+body {
+    font-family: 'Exo 2', sans-serif;
+    background: url(../imagens/img-background3.jpeg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 100px 0; 
+    box-sizing: border-box;
+}
+.container-sobre {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+.logo-link-sobre {
+    position: absolute;
+    top: 0;
+    left: 40px;
+    transform: translateY(-50%); 
+    z-index: 10; 
+}
+
+#logo {
+    height: 150px; 
+    display: block;
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+    color: white; 
+    background-color: rgba(15, 15, 25, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(186, 85, 211, 0.4); 
+    border-radius: 12px;
+    gap: 15px;
+    width: 100%;
+    padding: 80px 50px 50px 50px; 
+    box-sizing: border-box;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5), 0 0 15px rgba(186, 85, 211, 0.2);
+}

@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- StreetMarket -->
     <div id="navs">
     <nav id="nav1">
         <div id="linkE1">                                                                                                           
@@ -19,7 +20,7 @@
                 </a>
             <label for="categorias"></label>
             <i class="bi bi-list icon1"></i>
-            <select id="categorias" required>
+            <select id="categorias" onchange="redirecionarCategoria(this)" required>
                 <option>Categorias</option>
                 <option>👟 Moda & Sneakers</option>
                 <option>🎮 Gaming & Setup</option>
@@ -36,7 +37,7 @@
             <button id="btn-pesquisa">
                 <i class="bi bi-search"></i>
             </button>
-            <a href=""><i class="bi bi-person icon1"></i>
+            <a href="login.html"><i class="bi bi-person icon1"></i>
                 <span>Entre ou <br><b>crie conta</b></span>
             </a>
             <a href=""><i class="bi bi-cart2 icon1"></i></a>
@@ -121,9 +122,9 @@
                     <p class="parcelamento">12x R$ 37,49</p>
                 </div>
             </div>
-
         </div>
 </div>
     </div>
 </body>
+<script src="js/script.js"></script>
 </html>
